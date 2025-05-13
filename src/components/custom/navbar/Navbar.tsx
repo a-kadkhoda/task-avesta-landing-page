@@ -34,7 +34,7 @@ const Navbar = () => {
         >
           <Link
             href={"/"}
-            className={`flex justify-center items-center py-2 px-4  leading-[26px] ${
+            className={`flex justify-center items-center py-2 px-4 leading-[26px] ${
               isSelected == NavbarItems.Home
                 ? "text-orange-1 font-bold"
                 : " text-purpel-1  font-normal"

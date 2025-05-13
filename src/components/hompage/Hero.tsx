@@ -35,7 +35,7 @@ const Hero = () => {
         </span>
       </div>
       <div className="size-full px-[345px] z-10 flex flex-col gap-y-2">
-        <div className="flex">
+        <div className="flex justify-center">
           <div className="flex flex-col justify-between">
             <ShipingCard src="/ship.png" text="حمل دریایی" />
             <ShipingCard src="/car.png" text="حمل جاده‌ای" />

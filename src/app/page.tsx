@@ -1,5 +1,7 @@
 import About from "@/components/hompage/About";
+import Achivement from "@/components/hompage/Achivement";
 import Hero from "@/components/hompage/Hero";
+import NextStep from "@/components/hompage/nextStep";
 import Services from "@/components/hompage/Services";
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <Achivement />
+      <NextStep />
     </div>
   );
 }

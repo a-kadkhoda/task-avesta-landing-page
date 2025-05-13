@@ -1,7 +1,5 @@
-
-import "./globals.css";
-
-
+import ThemeProvider from "@/components/providers/theme-provider/ThemeProvider";
+import "../styles/globals.css";
 
 export default function RootLayout({
   children,
@@ -9,10 +7,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-      >
-        {children}
+    <html lang="en" dir="rtl" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

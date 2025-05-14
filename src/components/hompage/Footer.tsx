@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
-      <div className="w-full mt-[144px] relative">
+    <div>
+      <div className="w-full  relative">
         <img src="/videoContainer.png" className="size-full " />
         <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[36px] text-black-1 custom-text-shadow">
           <span className="text-orange-1 ">مدیریت</span> با داده{" "}
@@ -80,7 +80,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

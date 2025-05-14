@@ -3,7 +3,7 @@ import InfoCard from "@/components/custom/InfoCard";
 
 const NextStep = () => {
   return (
-    <div className="px-[345.5px] mt-[144px]">
+    <div className="px-[345.5px] ">
       <div className="flex flex-col py-6 px-[128px] justify-center items-center gap-6">
         <span className="text-[32px] font-bold text-black-1">
           <span className="text-orange-1">اولین</span> قدمتان را در مسیر

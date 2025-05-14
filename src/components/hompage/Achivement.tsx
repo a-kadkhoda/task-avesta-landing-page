@@ -1,7 +1,7 @@
 const Achivement = () => {
   return (
     <div
-      className="w-full  mt-[144px] px-[346px] py-16 h-[546px] "
+      className="w-full   px-[346px] py-16 h-[546px] "
       style={{ backgroundImage: 'url("/Avesta achievements.png")' }}
     >
       <div className=" flex py-3 px-[3px] gap-x-[176px] ">

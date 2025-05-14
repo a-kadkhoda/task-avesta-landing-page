@@ -9,19 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import { ChevronDownIcon } from "lucide-react";
-
-const enum NavbarItems {
-  Home = 1,
-  Services,
-  About_avesta,
-  Truck_recall,
-  Job_opportunities,
-  Digital_archive,
-  Contact_us,
-}
+import { menu } from "@/lib/helper/navbar";
 
 const Navbar = () => {
-  const [isSelected, setIsSelected] = useState<number | null>(1);
+  const [isSelected, setIsSelected] = useState<string | null>("خانه");
 
   return (
     <div className="w-full  h-[74px]  bg-pink-1 rounded-[48px] ">
@@ -32,88 +23,40 @@ const Navbar = () => {
         <div
           className={`w-full flex flex-row  py-2 gap-x-3 items-center h-full text-base  `}
         >
-          <Link
-            href={"/"}
-            className={`flex justify-center items-center py-2 px-4 leading-[26px] ${
-              isSelected == NavbarItems.Home
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1  font-normal"
-            } `}
-            onClick={() => setIsSelected(NavbarItems.Home)}
-          >
-            صفحه اصلی
-          </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger
-              className={`flex flex-row justify-center items-center py-2 px-4 gap-1 border-0 outline-0  ${
-                isSelected == NavbarItems.Services
-                  ? "text-orange-1 font-bold"
-                  : " text-purpel-1  font-normal"
-              }`}
-            >
-              خدمات <ChevronDownIcon size={16} />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {/* {dropDownItems?.map((item, index) => {
+          {menu.map((item, index) => {
+            return item === "خدمات" ? (
+              <DropdownMenu key={index}>
+                <DropdownMenuTrigger
+                  className={`flex flex-row justify-center items-center py-2 px-4 gap-1 border-0 outline-0  cursor-pointer ${
+                    isSelected == item
+                      ? "text-orange-1 font-bold"
+                      : " text-purpel-1  font-normal"
+                  }`}
+                >
+                  {item}
+                  <ChevronDownIcon size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {/* {dropDownItems?.map((item, index) => {
                 return <DropdownMenuItem key={index}>{item}</DropdownMenuItem>;
               })} */}
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <Link
-            href={"/#"}
-            className={`flex justify-center items-center py-2 px-[13px]  leading-[26px]  ${
-              isSelected == NavbarItems.About_avesta
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1 font-normal"
-            }`}
-            onClick={() => setIsSelected(NavbarItems.About_avesta)}
-          >
-            درباره اوستا
-          </Link>
-          <Link
-            href={"/#"}
-            className={`flex justify-center items-center py-2 px-[13px]  leading-[26px]  ${
-              isSelected == NavbarItems.Truck_recall
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1  font-normal"
-            }`}
-            onClick={() => setIsSelected(NavbarItems.Truck_recall)}
-          >
-            فراخوان کامیون‌ها
-          </Link>
-          <Link
-            href={"/#"}
-            className={`flex justify-center items-center py-2 px-[13px]  leading-[26px]  ${
-              isSelected == NavbarItems.Job_opportunities
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1  font-normal"
-            }`}
-            onClick={() => setIsSelected(NavbarItems.Job_opportunities)}
-          >
-            فرصت‌های شغلی
-          </Link>
-          <Link
-            href={"/#"}
-            className={`flex justify-center items-center py-2 px-[13px]  leading-[26px]  ${
-              isSelected == NavbarItems.Digital_archive
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1  font-normal"
-            }`}
-            onClick={() => setIsSelected(NavbarItems.Digital_archive)}
-          >
-            آرشیو دیجیتال
-          </Link>
-          <Link
-            href={"/#"}
-            className={`flex justify-center items-center py-2 px-[13px] leading-[26px]  ${
-              isSelected == NavbarItems.Contact_us
-                ? "text-orange-1 font-bold"
-                : " text-purpel-1  font-normal"
-            }`}
-            onClick={() => setIsSelected(NavbarItems.Contact_us)}
-          >
-            ارتباط با ما
-          </Link>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={index}
+                href={"/"}
+                className={`flex justify-center items-center py-2 px-4 leading-[26px] ${
+                  isSelected == item
+                    ? "text-orange-1 font-bold"
+                    : " text-purpel-1  font-normal"
+                } `}
+                onClick={() => setIsSelected(item)}
+              >
+                {item}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

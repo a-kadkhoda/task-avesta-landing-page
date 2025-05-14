@@ -37,15 +37,15 @@ const Hero = () => {
       <div className="size-full px-[345px] z-10 flex flex-col gap-y-2">
         <div className="flex justify-center">
           <div className="flex flex-col justify-between">
-            <ShipingCard src="/ship.png" text="حمل دریایی" />
-            <ShipingCard src="/car.png" text="حمل جاده‌ای" />
+            <ShipingCard src="/aiplane.png" text="حمل هوایی" />
+            <ShipingCard src="/train.png" text="حمل ریلی" />
           </div>
           <div className="flex justify-center items-center ">
             <img src="/avestaCpuContainer.png" alt="avestaCpu" />
           </div>
           <div className="flex flex-col justify-between">
-            <ShipingCard src="/aiplane.png" text="حمل هوایی" />
-            <ShipingCard src="/train.png" text="حمل ریلی" />
+            <ShipingCard src="/ship.png" text="حمل دریایی" />
+            <ShipingCard src="/car.png" text="حمل جاده‌ای" />
           </div>
         </div>
         <ShipingCard src="/ai.png" text="هوش مصنوعی" />

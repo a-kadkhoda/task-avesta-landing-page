@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <>
       <div className="mt-[104px] px-[346px] ">
-        <div className="bg-gradient-services h-[750px] px-[55px] py-[98px] flex flex-col gap-y-12 justify-center items-center">
+        <div className="bg-gradient-services h-[750px] px-[55px] py-[98px] flex flex-col gap-y-12 justify-center items-center rounded-2xl ">
           <span className="text-[32px] font-bold text-black-1 py-6">
             خدمات جامع و چندوجهی <span className="text-orange-1"> اَوستا </span>
             هوش‌یار در حوزه حمل‌ونقل
